@@ -63,7 +63,7 @@ fi
 
 # replace the 'localhost' of the output to the host's address, and format it into
 # a series of html links. Save this at the /directory page in the website.
-{ turkic publish --offline |\
+{ turkic publish --100 |\
   tee /dev/fd/3 | sed "s|http://localhost|<a href=\.\.|" |\
                   sed "s|offline|offline> Video Segment <\/a><br>|"  > /root/vatic/public/directory/index.html; } 3>&1
 
